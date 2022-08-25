@@ -14,7 +14,7 @@ def serve():
 
     routes = {}
     for path, command in zip(args.command[0::2], args.command[1::2]):
-        print(f'echo {path} > /dev/udp/localhost/{args.port}', command)
+        print(f'echo {path} > /dev/udp/localhost/{args.port}', '#', command)
         routes[path.encode('UTF-8')] = command
         routes[f'{path}\n'.encode('UTF-8')] = command
 
