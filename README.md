@@ -37,11 +37,11 @@ shell2udp --port 3306 /beep 'powershell -command [Console]::Beep(440,2000)'
 ### Dispatch
 
 ```powershell
-[System.Net.Sockets.UdpClient]::New().Send("", 0, "127.0.0.1", 8080)
+[System.Net.Sockets.UdpClient]::New().Send("", 0, "localhost", 8080)
 ```
 
 ```powershell
-[System.Net.Sockets.UdpClient]::New().Send([System.Text.Encoding]::UTF8.GetBytes("/beep"), 5, "127.0.0.1", 8080)
+[System.Net.Sockets.UdpClient]::New().Send([System.Text.Encoding]::UTF8.GetBytes("/beep"), 5, "localhost", 8080)
 # [System.Text.Encoding]::UTF8.GetBytes("/beep").Length
 ```
 
