@@ -2,7 +2,7 @@ from setuptools import setup
 
 setup(
     name='shell2udp',
-    version='1.4',
+    version='1.5',
     description='Executing shell commands via UDP server',
     long_description=open('README.md', encoding='utf-8').read(),
     long_description_content_type='text/markdown',
